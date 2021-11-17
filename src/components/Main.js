@@ -1,11 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
 import '../styles/Main.css'
+
+
+
 
 export default function Main(){
 
+    const {RandomPassword} = useContext(Context)
+    
+
     return (
         <div className="main-container">
-            <h1>main section</h1>
+            <div>
+
+            </div>
+            <h1>{}</h1>
         </div>
     )
 }
