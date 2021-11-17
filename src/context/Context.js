@@ -5,7 +5,7 @@ const Context = React.createContext()
 function ContextProvider({children})  {
     const [password, setPassword] = useState("password1234")
 
-    const [len, setLen] = useState(8)
+    const [len, setLen] = useState(6)
     const [minUpper, setMinUpper] = useState(0)
     const [minLower, setMinLower] = useState(0)
     const [minNumber, setMinNumber] = useState(-1)
