@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import '../styles/Main.css'
+import { Context } from "../context/Context";
 
 
 
@@ -11,10 +12,10 @@ export default function Main(){
 
     return (
         <div className="main-container">
-            <div>
-
+            <div className="top-container">
+                <h1>{RandomPassword()}</h1>
             </div>
-            <h1>{}</h1>
+            
         </div>
     )
 }

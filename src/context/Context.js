@@ -4,6 +4,8 @@ const Context = React.createContext()
 
 function ContextProvider({children})  {
 
+    
+
     function RandomPassword(len = 8, minUpper = 0, minLower = 0, minNumber = -1, minSpecial = -1) {
         let chars = String.fromCharCode(...Array(127).keys()).slice(33),//chars
             A2Z = String.fromCharCode(...Array(91).keys()).slice(65),//A-Z

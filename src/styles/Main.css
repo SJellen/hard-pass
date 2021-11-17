@@ -1,12 +1,14 @@
 
 .main-container {
-    background-color: red;
     border: 1px solid blue;
     width: 750px;
     height: 500px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     border-radius: 25px;
     margin-top: 5rem;
+}
+.top-container {
+    width: 100%;
+    border: 1px solid gold;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
 }
