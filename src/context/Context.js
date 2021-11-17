@@ -1,12 +1,19 @@
-import React, {useContext, useState} from 'react'
+import React, {useContext, useState, useEffect} from 'react'
 
 const Context = React.createContext()
 
 function ContextProvider({children})  {
+    const [password, setPassword] = useState("password1234")
 
-    
+    const [len, setLen] = useState(8)
+    const [minUpper, setMinUpper] = useState(0)
+    const [minLower, setMinLower] = useState(0)
+    const [minNumber, setMinNumber] = useState(-1)
+    const [minSpecial, setMinSpecial] = useState(-1)
 
-    function RandomPassword(len = 8, minUpper = 0, minLower = 0, minNumber = -1, minSpecial = -1) {
+
+
+    function RandomPassword() {
         let chars = String.fromCharCode(...Array(127).keys()).slice(33),//chars
             A2Z = String.fromCharCode(...Array(91).keys()).slice(65),//A-Z
             a2z = String.fromCharCode(...Array(123).keys()).slice(97),//a-z
@@ -22,11 +29,20 @@ function ContextProvider({children})  {
             Array.from({length: minNumber ? minNumber : 0}, () => zero2nine[Math.floor(Math.random() * zero2nine.length)]),
             Array.from({length: Math.max(len, minRequired) - (minRequired ? minRequired : 0)}, () => chars[Math.floor(Math.random() * chars.length)]),
         )
-        return rs.sort(() => Math.random() > Math.random()).join('')
+        let pass = rs.sort(() => Math.random() > Math.random()).join('')
+        setPassword(pass)
     }
 
+    function handleReloadClick() {
+        RandomPassword()
+    }
+
+    useEffect(() => {
+        console.log(password)
+    }, [password])
+
     return (
-        <Context.Provider value={{RandomPassword}}>
+        <Context.Provider value={{handleReloadClick, password}}>
             {children}
         </Context.Provider>
     )
