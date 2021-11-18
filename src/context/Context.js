@@ -10,6 +10,8 @@ function ContextProvider({children})  {
     const [minLower, setMinLower] = useState(0)
     const [minNumber, setMinNumber] = useState(0)
     const [minSpecial, setMinSpecial] = useState(0)
+    const [symbolsChecked, setSymbolsChecked] = useState(false)
+    const [numbersChecked, setNumbersChecked] = useState(false)
 
 
 
@@ -42,12 +44,20 @@ function ContextProvider({children})  {
         setLen(sliderLength)
     }
 
+    function handleSymbolCheck() {
+        setSymbolsChecked(!symbolsChecked)
+    }
+
+    function handleNumberCheck() {
+        setNumbersChecked(!numbersChecked)
+    }
+
     useEffect(() => {
-        console.log(password)
-    }, [password])
+        console.log(symbolsChecked, numbersChecked)
+    }, [symbolsChecked, numbersChecked])
 
     return (
-        <Context.Provider value={{handleReloadClick, password, len, handleCharacterLength}}>
+        <Context.Provider value={{handleReloadClick, password, len, handleCharacterLength, handleSymbolCheck, symbolsChecked, handleNumberCheck, numbersChecked}}>
             {children}
         </Context.Provider>
     )

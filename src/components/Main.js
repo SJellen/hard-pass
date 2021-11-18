@@ -7,7 +7,7 @@ import { Context } from "../context/Context";
 
 export default function Main(){
 
-    const {password, handleReloadClick, len, handleCharacterLength} = useContext(Context)
+    const {password, handleReloadClick, len, handleCharacterLength, handleSymbolCheck, symbolsChecked, handleNumberCheck, numbersChecked} = useContext(Context)
 
 
     
@@ -28,11 +28,11 @@ export default function Main(){
                 <span className="selection-container-left" ><h4>Options</h4></span>
                 <span className="check-container">
                     <h4>Symbols</h4>
-                    <input type="checkbox" />
+                    <input type="checkbox" id="symbols" name="symbols" value={symbolsChecked} onChange={handleSymbolCheck} />
                 </span>
                 <span className="check-container">
                     <h4>Numbers</h4>
-                    <input type="checkbox" />
+                    <input type="checkbox" id="numbers" name="numbers" value={numbersChecked} onChange={handleNumberCheck} />
                 </span>
             </div>
             <div className="selection-container">
