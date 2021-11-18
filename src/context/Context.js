@@ -8,8 +8,8 @@ function ContextProvider({children})  {
     const [len, setLen] = useState(6)
     const [minUpper, setMinUpper] = useState(0)
     const [minLower, setMinLower] = useState(0)
-    const [minNumber, setMinNumber] = useState(-1)
-    const [minSpecial, setMinSpecial] = useState(-1)
+    const [minNumber, setMinNumber] = useState(0)
+    const [minSpecial, setMinSpecial] = useState(0)
     const [symbolsChecked, setSymbolsChecked] = useState(false)
     const [numbersChecked, setNumbersChecked] = useState(false)
 
@@ -21,8 +21,8 @@ function ContextProvider({children})  {
             a2z = String.fromCharCode(...Array(123).keys()).slice(97),//a-z
             zero2nine = String.fromCharCode(...Array(58).keys()).slice(48),//0-9
             specials = chars.replace(/\w/g, '')
-        if (minSpecial < 0) chars = zero2nine + A2Z + a2z
-        if (minNumber < 0) chars = chars.replace(zero2nine, '')
+        if (minSpecial < 1) chars = zero2nine + A2Z + a2z
+        if (minNumber < 1) chars = chars.replace(zero2nine, '')
         let minRequired = minSpecial + minUpper + minLower + minNumber
         let rs = [].concat(
             Array.from({length: minSpecial ? minSpecial : 0}, () => specials[Math.floor(Math.random() * specials.length)]),
@@ -57,12 +57,12 @@ function ContextProvider({children})  {
         if (symbolsChecked) {
             setMinSpecial(1)
         } else {
-            setMinSpecial(-1)
+            setMinSpecial(0)
         }
         if (numbersChecked) {
             setMinNumber(1)
         } else {
-            setMinNumber(-1)
+            setMinNumber(0)
         }
     }, [symbolsChecked, numbersChecked, minSpecial, minNumber])
 
