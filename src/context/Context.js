@@ -8,8 +8,8 @@ function ContextProvider({children})  {
     const [len, setLen] = useState(6)
     const [minUpper, setMinUpper] = useState(0)
     const [minLower, setMinLower] = useState(0)
-    const [minNumber, setMinNumber] = useState(-1)
-    const [minSpecial, setMinSpecial] = useState(-1)
+    const [minNumber, setMinNumber] = useState(0)
+    const [minSpecial, setMinSpecial] = useState(0)
 
 
 
@@ -37,12 +37,17 @@ function ContextProvider({children})  {
         RandomPassword()
     }
 
+    function handleCharacterLength(e) {
+        let sliderLength = parseInt(e.target.value)
+        setLen(sliderLength)
+    }
+
     useEffect(() => {
         console.log(password)
     }, [password])
 
     return (
-        <Context.Provider value={{handleReloadClick, password}}>
+        <Context.Provider value={{handleReloadClick, password, len, handleCharacterLength}}>
             {children}
         </Context.Provider>
     )

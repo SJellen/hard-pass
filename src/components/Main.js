@@ -7,7 +7,7 @@ import { Context } from "../context/Context";
 
 export default function Main(){
 
-    const {password, handleReloadClick} = useContext(Context)
+    const {password, handleReloadClick, len, handleCharacterLength} = useContext(Context)
 
 
     
@@ -21,10 +21,13 @@ export default function Main(){
                 </span>
             </div>
             <div className="selection-container">
-                sdgfsgfdg
+                <span className="selection-container-left" >{len + 2} characters</span>
+                <input type="range" id="length" name="characters" min="6" max="98" onChange={(e) => handleCharacterLength(e)} className="selection-container-right" />
             </div>
             <div className="selection-container">
-                sdgfsgfdg
+                <span className="selection-container-left" >Options</span>
+                <span>Symbols</span>
+                <span>Number</span>
             </div>
             <div className="selection-container">
                 sdgfsgfdg
