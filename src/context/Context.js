@@ -8,8 +8,8 @@ function ContextProvider({children})  {
     const [len, setLen] = useState(6)
     const [minUpper, setMinUpper] = useState(0)
     const [minLower, setMinLower] = useState(0)
-    const [minNumber, setMinNumber] = useState(0)
-    const [minSpecial, setMinSpecial] = useState(0)
+    const [minNumber, setMinNumber] = useState(-1)
+    const [minSpecial, setMinSpecial] = useState(-1)
     const [symbolsChecked, setSymbolsChecked] = useState(false)
     const [numbersChecked, setNumbersChecked] = useState(false)
 
@@ -53,8 +53,18 @@ function ContextProvider({children})  {
     }
 
     useEffect(() => {
-        console.log(symbolsChecked, numbersChecked)
-    }, [symbolsChecked, numbersChecked])
+        // console.log(symbolsChecked, numbersChecked)
+        if (symbolsChecked) {
+            setMinSpecial(1)
+        } else {
+            setMinSpecial(-1)
+        }
+        if (numbersChecked) {
+            setMinNumber(1)
+        } else {
+            setMinNumber(-1)
+        }
+    }, [symbolsChecked, numbersChecked, minSpecial, minNumber])
 
     return (
         <Context.Provider value={{handleReloadClick, password, len, handleCharacterLength, handleSymbolCheck, symbolsChecked, handleNumberCheck, numbersChecked}}>
