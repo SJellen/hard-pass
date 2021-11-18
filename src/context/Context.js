@@ -14,7 +14,18 @@ function ContextProvider({children})  {
     const [numbersChecked, setNumbersChecked] = useState(false)
 
 
+    // array shuffler
+    function shuffle(array) {
+        let currentIndex = array.length, randomIndex
+        while (currentIndex != 0) {
+            randomIndex = Math.floor(Math.random() * currentIndex)
+            currentIndex--
+            [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]]
+        }
+        return array
+    }
 
+    // password creator
     function RandomPassword() {
         let chars = String.fromCharCode(...Array(127).keys()).slice(33),//chars
             A2Z = String.fromCharCode(...Array(91).keys()).slice(65),//A-Z
@@ -31,7 +42,8 @@ function ContextProvider({children})  {
             Array.from({length: minNumber ? minNumber : 0}, () => zero2nine[Math.floor(Math.random() * zero2nine.length)]),
             Array.from({length: Math.max(len, minRequired) - (minRequired ? minRequired : 0)}, () => chars[Math.floor(Math.random() * chars.length)]),
         )
-        let pass = rs.sort(() => Math.random() > Math.random()).join('')
+        let pass = shuffle(rs)
+        pass.join('')
         setPassword(pass)
     }
 
