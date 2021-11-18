@@ -55,3 +55,14 @@
     width: 70%;
     border: 1px solid red;
 }
+
+.check-container {
+    border: 1px solid red;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.check-container:last-child {
+    margin-right: 1rem;
+}

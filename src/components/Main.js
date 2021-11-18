@@ -21,13 +21,19 @@ export default function Main(){
                 </span>
             </div>
             <div className="selection-container">
-                <span className="selection-container-left" >{len + 2} characters</span>
+                <span className="selection-container-left" ><h4>{len + 2} characters</h4></span>
                 <input type="range" id="length" name="characters" min="6" max="98" onChange={(e) => handleCharacterLength(e)} className="selection-container-right" />
             </div>
             <div className="selection-container">
-                <span className="selection-container-left" >Options</span>
-                <span>Symbols</span>
-                <span>Number</span>
+                <span className="selection-container-left" ><h4>Options</h4></span>
+                <span className="check-container">
+                    <h4>Symbols</h4>
+                    <input type="checkbox" />
+                </span>
+                <span className="check-container">
+                    <h4>Numbers</h4>
+                    <input type="checkbox" />
+                </span>
             </div>
             <div className="selection-container">
                 sdgfsgfdg
