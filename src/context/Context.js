@@ -61,6 +61,8 @@ function ContextProvider({children})  {
         setNumbersChecked(!numbersChecked)
     }
 
+    
+
     useEffect(() => {
         // console.log(symbolsChecked, numbersChecked)
         if (symbolsChecked) {

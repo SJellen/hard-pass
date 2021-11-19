@@ -78,6 +78,7 @@ button {
 
 button:hover {
     cursor: pointer;
+    color: rgb(219, 216, 216);
 }
 
 .slide-down-container {

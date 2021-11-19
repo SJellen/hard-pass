@@ -5,7 +5,7 @@ export default function Header() {
 
     return (
         <div className="header-container">
-            <h1>Hard Pass</h1>
+            <span className="logo-container"><h1 className="logo">Hard Pass</h1></span>
         </div>
     )
     
