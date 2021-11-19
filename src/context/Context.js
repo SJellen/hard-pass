@@ -24,22 +24,22 @@ function ContextProvider({children})  {
 
     // password creator
     function RandomPassword(minUpper = 0, minLower = 0) {
-        let chars = String.fromCharCode(...Array(127).keys()).slice(33),//chars
-            A2Z = String.fromCharCode(...Array(91).keys()).slice(65),//A-Z
-            a2z = String.fromCharCode(...Array(123).keys()).slice(97),//a-z
-            zero2nine = String.fromCharCode(...Array(58).keys()).slice(48),//0-9
-            specials = chars.replace(/\w/g, '')
-        if (minSpecial < 1) chars = zero2nine + A2Z + a2z
-        if (minNumber < 1) chars = chars.replace(zero2nine, '')
+        let characters = String.fromCharCode(...Array(127).keys()).slice(33), //characters
+            upperA2Z = String.fromCharCode(...Array(91).keys()).slice(65), //uppercase A-Z
+            lowerA2z = String.fromCharCode(...Array(123).keys()).slice(97), // lower a-z
+            zero2nine = String.fromCharCode(...Array(58).keys()).slice(48), // numbers 0-9
+            specials = characters.replace(/\w/g, '') // special characters
+        if (minSpecial < 1) characters = zero2nine + upperA2Z + lowerA2z
+        if (minNumber < 1) characters = characters.replace(zero2nine, '')
         let minRequired = minSpecial + minUpper + minLower + minNumber
-        let rs = [].concat(
-            Array.from({length: minSpecial ? minSpecial : 0}, () => specials[Math.floor(Math.random() * specials.length)]),
-            Array.from({length: minUpper ? minUpper : 0}, () => A2Z[Math.floor(Math.random() * A2Z.length)]),
-            Array.from({length: minLower ? minLower : 0}, () => a2z[Math.floor(Math.random() * a2z.length)]),
-            Array.from({length: minNumber ? minNumber : 0}, () => zero2nine[Math.floor(Math.random() * zero2nine.length)]),
-            Array.from({length: Math.max(len, minRequired) - (minRequired ? minRequired : 0)}, () => chars[Math.floor(Math.random() * chars.length)]),
-        )
-        let pass = shuffle(rs)
+        let randomArray = [
+            ...Array.from({length: minSpecial ? minSpecial : 0}, () => specials[Math.floor(Math.random() * specials.length)]),
+            ...Array.from({length: minUpper ? minUpper : 0}, () => upperA2Z[Math.floor(Math.random() * upperA2Z.length)]),
+            ...Array.from({length: minLower ? minLower : 0}, () => lowerA2z[Math.floor(Math.random() * lowerA2z.length)]),
+            ...Array.from({length: minNumber ? minNumber : 0}, () => zero2nine[Math.floor(Math.random() * zero2nine.length)]),
+            ...Array.from({length: Math.max(len, minRequired) - (minRequired ? minRequired : 0)}, () => characters[Math.floor(Math.random() * characters.length)])
+        ]
+        let pass = shuffle(randomArray)
         pass.join('')
         setPassword(pass)
     }
