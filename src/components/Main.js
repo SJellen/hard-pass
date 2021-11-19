@@ -37,7 +37,8 @@ export default function Main(){
                 </span>
             </div>
             <div className="selection-container">
-                sdgfsgfdg
+                <span className="selection-container-left" ><button>Create Login</button></span>
+                <span className="selection-container-right" ><button>Copy</button></span>
             </div>
         </div>  
             <div className="slide-down-container">
