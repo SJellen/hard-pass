@@ -1,3 +1,4 @@
+import { func } from 'joi'
 import React, {useContext, useState, useEffect} from 'react'
 
 const Context = React.createContext()
@@ -10,6 +11,10 @@ function ContextProvider({children})  {
     const [minSpecial, setMinSpecial] = useState(0)
     const [symbolsChecked, setSymbolsChecked] = useState(false)
     const [numbersChecked, setNumbersChecked] = useState(false)
+
+    const [isCopied, setIsCopied] = useState(false)
+    const [isCopiedLogin, setIsCopiedLogin] = useState(false)
+    const [sliderOpen, setSliderOpen] = useState(false)
     
     // array shuffler
     function shuffle(array) {
@@ -45,6 +50,7 @@ function ContextProvider({children})  {
     }
 
     function handleReloadClick() {
+        setIsCopied(false)
         RandomPassword()
     }
 
@@ -59,6 +65,10 @@ function ContextProvider({children})  {
 
     function handleNumberCheck() {
         setNumbersChecked(!numbersChecked)
+    }
+
+    function handleCopyClick() {
+        setIsCopied(true)
     }
 
     
@@ -78,7 +88,7 @@ function ContextProvider({children})  {
     }, [symbolsChecked, numbersChecked, minSpecial, minNumber])
 
     return (
-        <Context.Provider value={{handleReloadClick, password, len, handleCharacterLength, handleSymbolCheck, symbolsChecked, handleNumberCheck, numbersChecked}}>
+        <Context.Provider value={{handleReloadClick, password, len, handleCharacterLength, handleSymbolCheck, symbolsChecked, handleNumberCheck, numbersChecked, isCopied, handleCopyClick, sliderOpen, setSliderOpen}}>
             {children}
         </Context.Provider>
     )

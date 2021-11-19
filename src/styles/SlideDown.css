@@ -1,0 +1,13 @@
+.slide-down-container {
+    width: 99.8%;
+    height: 200px;
+    background-color: rgb(219, 216, 216);
+    border: 1px solid silver;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    /* display: none; */
+}

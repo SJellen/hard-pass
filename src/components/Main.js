@@ -1,20 +1,15 @@
 import React, { useContext } from "react";
 import '../styles/Main.css'
 import { Context } from "../context/Context";
-
-
-
+import SlideDown from "./SlideDown";
 
 export default function Main(){
 
-    const {password, handleReloadClick, len, handleCharacterLength, handleSymbolCheck, symbolsChecked, handleNumberCheck, numbersChecked} = useContext(Context)
-
-
-    
+    const {password, handleReloadClick, len, handleCharacterLength, handleSymbolCheck, symbolsChecked, handleNumberCheck, numbersChecked, isCopied, handleCopyClick, sliderOpen, setSliderOpen} = useContext(Context)
 
     return (
         <div>
-          <div className="main-container">
+          <div className="main-container" style={{borderBottomLeftRadius: sliderOpen ? '0px' : '25px', borderBottomRightRadius: sliderOpen ? '0px' : '25px'}}>
             <div className="top-container" style={{borderBottom: password === "password1234" ? '5px solid red' : password.length < 20 ? '5px solid yellow' : '5px solid green'}}>
                 <h1 className="password" >{password}</h1>
                 <span className="reload-button" onClick={handleReloadClick}>
@@ -36,14 +31,12 @@ export default function Main(){
                     <input type="checkbox" id="numbers" name="numbers" value={numbersChecked} onChange={handleNumberCheck} />
                 </span>
             </div>
-            <div className="selection-container">
-                <span className="selection-container-left" ><button>Create Login</button></span>
-                <span className="selection-container-right" ><button>Copy</button></span>
+            <div className="button-container selection-container" style={{display: sliderOpen ? 'none' : ''}}>
+                <span className="selection-container-left" ><button onClick={() => setSliderOpen(true)}>Create Login</button></span>
+                <span className="selection-container-right" ><button onClick={handleCopyClick}>{isCopied ? 'Copied' : "Copy"}</button></span>
             </div>
         </div>  
-            <div className="slide-down-container">
-                sdgfsgfdg
-            </div>
+            <SlideDown />
         </div>
     )
 }
