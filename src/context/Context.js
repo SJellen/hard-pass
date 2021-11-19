@@ -6,14 +6,11 @@ function ContextProvider({children})  {
     const [password, setPassword] = useState("password1234")
 
     const [len, setLen] = useState(6)
-    const [minUpper, setMinUpper] = useState(0)
-    const [minLower, setMinLower] = useState(0)
     const [minNumber, setMinNumber] = useState(0)
     const [minSpecial, setMinSpecial] = useState(0)
     const [symbolsChecked, setSymbolsChecked] = useState(false)
     const [numbersChecked, setNumbersChecked] = useState(false)
-
-
+    
     // array shuffler
     function shuffle(array) {
         let currentIndex = array.length, randomIndex
@@ -26,7 +23,7 @@ function ContextProvider({children})  {
     }
 
     // password creator
-    function RandomPassword() {
+    function RandomPassword(minUpper = 0, minLower = 0) {
         let chars = String.fromCharCode(...Array(127).keys()).slice(33),//chars
             A2Z = String.fromCharCode(...Array(91).keys()).slice(65),//A-Z
             a2z = String.fromCharCode(...Array(123).keys()).slice(97),//a-z
