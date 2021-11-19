@@ -13,7 +13,8 @@ export default function Main(){
     
 
     return (
-        <div className="main-container">
+        <div>
+          <div className="main-container">
             <div className="top-container" style={{borderBottom: password === "password1234" ? '5px solid red' : password.length < 20 ? '5px solid yellow' : '5px solid green'}}>
                 <h1 className="password" >{password}</h1>
                 <span className="reload-button" onClick={handleReloadClick}>
@@ -38,10 +39,10 @@ export default function Main(){
             <div className="selection-container">
                 sdgfsgfdg
             </div>
-            <div className="selection-container">
+        </div>  
+            <div className="slide-down-container">
                 sdgfsgfdg
             </div>
-            
         </div>
     )
 }
