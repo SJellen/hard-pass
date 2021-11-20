@@ -57,6 +57,7 @@ function ContextProvider({children})  {
     function handleCharacterLength(e) {
         let sliderLength = parseInt(e.target.value)
         setLen(sliderLength)
+        RandomPassword()
     }
 
     function handleSymbolCheck() {
