@@ -1,10 +1,10 @@
 .slide-down-container {
     width: 99.8%;
-    height: 200px;
+    height: auto;
     background-color: rgb(219, 216, 216);
     border: 1px solid silver;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     
     justify-content: space-between;
     border-bottom-left-radius: 25px;
@@ -15,14 +15,42 @@
 .close-container {
     border: 1px solid red;
     width: 100%;
+    height: 50px;
     display: flex;
     flex-direction: row-reverse;
-    padding-right: 1rem;
+    margin-right: 1rem;
     align-items: center;
-    height: 50px;
+    
+}
+
+.close-button {
+    padding-right: 1rem;
 }
 
 .close-button:hover {
     cursor: pointer;
+}
+
+.input-container {
+    border: 1px solid blue;
+    width: 100%;
+}
+
+.single-input {
+    border: 1px solid red;
+    display: flex;
+    align-items: center;
+    height: 75px;
+}
+
+.copy-container {
+    height: 75px;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.copy-button-container {
+    padding-right: 1rem;
 }
 
