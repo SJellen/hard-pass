@@ -29,6 +29,10 @@
     margin-right: 1rem;
 }
 
+.reload-button:hover {
+    cursor: pointer;
+}
+
 .selection-container {
     width: 100%;
     height: 100px;

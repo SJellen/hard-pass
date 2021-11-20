@@ -5,9 +5,24 @@
     border: 1px solid silver;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    
     justify-content: space-between;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
     /* display: none; */
 }
+
+.close-container {
+    border: 1px solid red;
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: 1rem;
+    align-items: center;
+    height: 50px;
+}
+
+.close-button:hover {
+    cursor: pointer;
+}
+
