@@ -74,7 +74,11 @@
     margin-right:5%;
 }
 
-input[type=checkbox] {
+input[type=checkbox]:hover {
+    cursor: pointer;
+}
+
+input[type=range]:hover {
     cursor: pointer;
 }
 
