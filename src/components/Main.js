@@ -18,7 +18,16 @@ export default function Main(){
             </div>
             <div className="selection-container">
                 <span className="selection-container-left" ><h4>{len} characters</h4></span>
-                <input type="range" id="length" name="characters" min="6" max="98" onChange={(e) => handleCharacterLength(e)} className="selection-container-right" />
+                <input 
+                    type="range" 
+                    id="length" 
+                    name="characters" 
+                    min="6" 
+                    max="98" 
+                    onChange={(e) => handleCharacterLength(e)} 
+                    onClick={(e) => handleCharacterLength(e)}
+                    className="selection-container-right" 
+                />
             </div>
             <div className="selection-container">
                 <span className="selection-container-left" ><h4>Options</h4></span>
