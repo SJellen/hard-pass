@@ -8,12 +8,12 @@
     justify-content: space-between;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
-    /* display: none; */
+    border-top: none;
 }
 
 
 .close-button {
-    padding-left: 1rem;
+    padding-left: 5%;
 }
 
 .close-button:hover {
@@ -21,26 +21,32 @@
 }
 
 .input-container {
-    border: 1px solid blue;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
 }
 
 .single-input {
-    border: 1px solid red;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding-left: 1rem;
+    padding-left: 5%;
     height: 75px;
     width: 60%;
 }
 
 .single-input > input {
     margin-left: 2rem;
+    background-color: transparent;
+    width: 60%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
 }
 
 .single-input > label {
-    border: 1px solid blue;
     width: 100px;
 }
 
@@ -48,7 +54,6 @@
     margin-left: 2rem;
     max-width: 300px;
     word-wrap: break-word;
-    border: 1px solid green;
 }
 
 
@@ -61,6 +66,6 @@
 }
 
 .copy-button-container {
-    padding-right: 1rem;
+    padding-right: 5%;
 }
 

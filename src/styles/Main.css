@@ -20,13 +20,13 @@
     justify-content: space-between;
 }
 .password {
-    margin-left: 1rem;
+    margin-left:5%;
     width: 80%;
     word-wrap: break-word;
 }
 
 .reload-button {
-    margin-right: 1rem;
+    margin-right:5%;
 }
 
 .reload-button:hover {
@@ -45,11 +45,11 @@
 }
 
 .selection-container-left {
-    margin-left: 1rem;
+    margin-left:5%;
 }
 
 .selection-container-right {
-    margin-right: 1rem;
+    margin-right:5%;
 }
 
 .button-container {
@@ -67,11 +67,11 @@
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
-    padding: 0 1rem;
+    padding: 0 5%;
 }
 
 .check-container:last-child {
-    margin-right: 1rem;
+    margin-right:5%;
     
 }
 
