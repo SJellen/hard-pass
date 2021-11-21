@@ -1,8 +1,7 @@
 .slide-down-container {
-    width: 99.8%;
+    width: 100%;
     height: auto;
     background-color: rgb(219, 216, 216);
-    border: 1px solid silver;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
