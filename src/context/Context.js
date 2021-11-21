@@ -51,6 +51,7 @@ function ContextProvider({children})  {
 
     function handleReloadClick() {
         setIsCopied(false)
+        setIsCopiedLogin(false)
         RandomPassword()
     }
 
@@ -72,6 +73,10 @@ function ContextProvider({children})  {
         setIsCopied(true)
     }
 
+    function handleLoginCopyClick() {
+        setIsCopiedLogin(true)
+    }
+
     
 
     useEffect(() => {
@@ -89,7 +94,7 @@ function ContextProvider({children})  {
     }, [symbolsChecked, numbersChecked, minSpecial, minNumber])
 
     return (
-        <Context.Provider value={{handleReloadClick, password, len, handleCharacterLength, handleSymbolCheck, symbolsChecked, handleNumberCheck, numbersChecked, isCopied, handleCopyClick, sliderOpen, setSliderOpen}}>
+        <Context.Provider value={{handleReloadClick, password, len, handleCharacterLength, handleSymbolCheck, symbolsChecked, handleNumberCheck, numbersChecked, isCopied, handleCopyClick, sliderOpen, setSliderOpen, handleLoginCopyClick, isCopiedLogin}}>
             {children}
         </Context.Provider>
     )
