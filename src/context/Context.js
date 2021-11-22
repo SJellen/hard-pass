@@ -45,7 +45,7 @@ function ContextProvider({children})  {
             ...Array.from({length: Math.max(len, minRequired) - (minRequired ? minRequired : 0)}, () => characters[Math.floor(Math.random() * characters.length)])
         ]
         let pass = shuffle(randomArray)
-        pass.join('')
+        pass = pass.join('')
         setPassword(pass)
     }
 
@@ -69,7 +69,17 @@ function ContextProvider({children})  {
         setNumbersChecked(!numbersChecked)
     }
 
+    const copyToClipBoard = async (text) => {
+        try {
+            await navigator.clipboard.writeText(text)
+        } catch (err) {
+            err("failed to copy")
+        }
+    }
+
     function handleCopyClick() {
+        console.log(password)
+        copyToClipBoard()
         setIsCopied(true)
     }
 
