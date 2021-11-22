@@ -1,4 +1,3 @@
-import { func } from 'joi'
 import React, {useContext, useState, useEffect} from 'react'
 
 const Context = React.createContext()
@@ -86,8 +85,7 @@ function ContextProvider({children})  {
     }
 
     function handleLoginCopyClick() {
-        console.log(password)
-        copyToClipBoard(password)
+        copyToClipBoard(` Website: ${website} \n Username: ${username} \n Password: ${password}`)
         setIsCopiedLogin(true)
     }
 

@@ -4,7 +4,7 @@ import { Context } from "../context/Context";
 
 export default function SlideDown() {
 
-    const {sliderOpen, setSliderOpen, password, handleLoginCopyClick, isCopiedLogin} = useContext(Context)
+    const {sliderOpen, setSliderOpen, password, handleLoginCopyClick, isCopiedLogin, setWebsite, setUsername} = useContext(Context)
 
     return (
         <div className="slide-down-container" style={{display: sliderOpen ? '' : 'none'}}>
@@ -14,6 +14,7 @@ export default function SlideDown() {
                     <input 
                         type="text"
                         id="website"
+                        onChange={(e) => setWebsite(e.target.value)}
                     />
                 </div> 
                 <div className="single-input">
@@ -21,6 +22,7 @@ export default function SlideDown() {
                     <input
                         type="text"
                         id="username"
+                        onChange={(e) => setUsername(e.target.value)}
                     />
                 </div>
                 <div className="single-input">
