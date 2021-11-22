@@ -9,6 +9,7 @@
     border-bottom-right-radius: 25px;
     border-top: none;
     margin-bottom: 5rem;
+    padding-top: 1rem;
 }
 
 
@@ -63,6 +64,7 @@
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
+    padding-top: 1rem;
 }
 
 .copy-button-container {

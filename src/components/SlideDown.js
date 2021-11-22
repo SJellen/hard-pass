@@ -10,18 +10,23 @@ export default function SlideDown() {
         <div className="slide-down-container" style={{display: sliderOpen ? '' : 'none'}}>
             <div className="input-container">
                 <div className="single-input">
+                    <label>Website</label>
+                    <input 
+                        type="text"
+                        id="website"
+                    />
+                </div> 
+                <div className="single-input">
                     <label>Username</label>
-                    <input/>
+                    <input
+                        type="text"
+                        id="username"
+                    />
                 </div>
                 <div className="single-input">
                     <label>Password</label>
                     <p className="single-input-password">{password}</p>
                 </div>
-                
-                <div className="single-input">
-                    <label>Website</label>
-                    <input />
-                </div> 
             </div>
             <div className="copy-container">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" className="close-button" onClick={() => setSliderOpen(false)}>
