@@ -6,17 +6,19 @@
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
     margin-top: 5rem;
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, .5);
 }
 .top-container {
     width: 100%;
     min-height: auto;
     border-bottom: 5px solid red;
-    background-color: silver;
     border-top-right-radius: 25px;
     border-top-left-radius: 25px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-color: rgba(192, 192, 192, .65);
+    backdrop-filter: blur(100px);
 }
 .password {
     margin-left:5%;
