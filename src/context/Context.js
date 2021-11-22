@@ -15,11 +15,14 @@ function ContextProvider({children})  {
     const [isCopied, setIsCopied] = useState(false)
     const [isCopiedLogin, setIsCopiedLogin] = useState(false)
     const [sliderOpen, setSliderOpen] = useState(false)
+
+    const [username, setUsername] = useState()
+    const [website, setWebsite] = useState()
     
     // array shuffler
     function shuffle(array) {
         let currentIndex = array.length, randomIndex
-        while (currentIndex != 0) {
+        while (currentIndex !== 0) {
             randomIndex = Math.floor(Math.random() * currentIndex)
             currentIndex--
             [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]]
@@ -78,12 +81,13 @@ function ContextProvider({children})  {
     }
 
     function handleCopyClick() {
-        console.log(password)
-        copyToClipBoard()
+        copyToClipBoard(password)
         setIsCopied(true)
     }
 
     function handleLoginCopyClick() {
+        console.log(password)
+        copyToClipBoard(password)
         setIsCopiedLogin(true)
     }
 
@@ -106,7 +110,7 @@ function ContextProvider({children})  {
     }, [symbolsChecked, numbersChecked, minSpecial, minNumber])
 
     return (
-        <Context.Provider value={{handleReloadClick, password, len, handleCharacterLength, handleSymbolCheck, symbolsChecked, handleNumberCheck, numbersChecked, isCopied, handleCopyClick, sliderOpen, setSliderOpen, handleLoginCopyClick, isCopiedLogin}}>
+        <Context.Provider value={{handleReloadClick, password, len, handleCharacterLength, handleSymbolCheck, symbolsChecked, handleNumberCheck, numbersChecked, isCopied, handleCopyClick, sliderOpen, setSliderOpen, handleLoginCopyClick, isCopiedLogin, username, setUsername, website, setWebsite}}>
             {children}
         </Context.Provider>
     )
