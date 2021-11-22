@@ -83,11 +83,13 @@ function ContextProvider({children})  {
         // console.log(symbolsChecked, numbersChecked)
         if (symbolsChecked) {
             setMinSpecial(1)
+            RandomPassword()
         } else {
             setMinSpecial(0)
         }
         if (numbersChecked) {
             setMinNumber(1)
+            RandomPassword()
         } else {
             setMinNumber(0)
         }
