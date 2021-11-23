@@ -1,4 +1,4 @@
-import React, {useContext, useState, useEffect} from 'react'
+import React, { useState, useEffect} from 'react'
 
 const Context = React.createContext()
 
@@ -89,10 +89,7 @@ function ContextProvider({children})  {
         setIsCopiedLogin(true)
     }
 
-    
-
     useEffect(() => {
-        // console.log(symbolsChecked, numbersChecked)
         if (symbolsChecked) {
             setMinSpecial(1)
             RandomPassword()
@@ -105,6 +102,7 @@ function ContextProvider({children})  {
         } else {
             setMinNumber(0)
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [symbolsChecked, numbersChecked, minSpecial, minNumber])
 
     return (
@@ -112,7 +110,6 @@ function ContextProvider({children})  {
             {children}
         </Context.Provider>
     )
-    
 
 }
 
