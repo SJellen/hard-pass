@@ -105,7 +105,20 @@ button:hover {
 
 @media only screen and (max-width: 900px){
     .main-container {
-        max-width: 90%;
+        width: 90vw;
+        margin: 5rem auto 0 auto;
+    }
+}
+
+@media only screen and (max-width: 725px){
+    .main-container {
+        margin: 5rem auto 0 auto;
+    }
+}
+
+@media only screen and (max-width: 650px){
+    .main-container {
+        width: 90vw;
         margin: 5rem auto 0 auto;
     }
 }

@@ -76,7 +76,7 @@
 
 @media only screen and (max-width: 900px){
     .slide-down-container {
-        max-width: 90%;
+        width: 90vw;
         margin: 0 auto;
     }
 }
