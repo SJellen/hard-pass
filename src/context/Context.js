@@ -85,7 +85,7 @@ function ContextProvider({children})  {
     }
 
     function handleLoginCopyClick() {
-        copyToClipBoard(` Website: ${website} \n Username: ${username} \n Password: ${password}`)
+        copyToClipBoard(` ${website && website.length !== 0 ? `Website: ${website}` : ''}\n ${username && username.length !== 0 ? `Username: ${username}` : ''} \n ${password && password.length !== 0 ? `Password: ${password}` : ''}`)
         setIsCopiedLogin(true)
     }
 
