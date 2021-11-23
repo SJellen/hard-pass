@@ -2,7 +2,6 @@
 .main-container {
     width: 750px;
     height: auto;
-    border-radius: 25px;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
     margin-top: 5rem;
@@ -126,7 +125,20 @@ button:hover {
 @media only screen and (max-width: 500px){
     .main-container {
         width: 90vw;
-        margin: 2rem auto 0 auto;
+        margin: 1rem auto 0 auto;
+        font-size: .9rem;
+    }
+    .password {
+        font-size: 1.25rem;
+    }
+
+    #length {
+        width: 50%;
+    }
+
+    svg {
+        width: 18px;
+        height: 18px;
     }
 }
 

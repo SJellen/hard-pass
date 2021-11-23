@@ -52,6 +52,7 @@
 
 .single-input > label {
     width: 100px;
+    font-weight: 700;
 }
 
 .single-input-password {
@@ -77,6 +78,13 @@
 @media only screen and (max-width: 900px){
     .slide-down-container {
         width: 90vw;
-        margin: 0 auto;
+        margin: 0 auto 5rem;
     }
+}
+
+@media only screen and (max-width: 500px){
+    .slide-down-container {
+        font-size: .9rem;
+    }
+
 }
