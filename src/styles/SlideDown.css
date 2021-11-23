@@ -10,6 +10,7 @@
     border-top: none;
     margin-bottom: 5rem;
     padding-top: 1rem;
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, .35);
 }
 
 
@@ -19,6 +20,8 @@
 
 .close-button:hover {
     cursor: pointer;
+    filter: drop-shadow(.5px .5px 10px black);
+    transition: filter 2s;
 }
 
 .input-container {
