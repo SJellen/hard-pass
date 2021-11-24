@@ -31,3 +31,12 @@
         border-bottom: 0;
     }
 }
+
+@media (orientation: landscape) and ( max-height: 600px) {
+    .logo {
+        font-size: 1rem;
+    }
+    .header-container {
+        border-bottom: 0;
+    }
+}

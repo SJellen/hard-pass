@@ -172,5 +172,11 @@ button:hover {
     }
 }
 
+@media (orientation: landscape) and ( max-height: 600px) {
+    .main-container {
+        margin-top: 1rem;
+    }
+}
+
 
 
