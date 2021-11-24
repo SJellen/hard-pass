@@ -140,6 +140,10 @@ button:hover {
         width: 18px;
         height: 18px;
     }
+
+    .button-container {
+        height: 75px;
+    }
 }
 
 @media only screen and (max-width: 375px) {
@@ -158,6 +162,7 @@ button:hover {
     .button-container {
         border-bottom-left-radius: 5px;
         border-bottom-right-radius: 5px;
+        height: 60px;
     }
 
     button {
