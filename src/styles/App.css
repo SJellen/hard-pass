@@ -6,3 +6,9 @@
     align-items: center;
     font-family: 'Open Sans', sans-serif;
 }
+
+@media (orientation: landscape) and ( max-height: 600px) {
+    .App {
+        padding-bottom: 2rem;
+    }
+}

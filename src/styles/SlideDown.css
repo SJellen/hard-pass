@@ -127,3 +127,12 @@
         font-size: .75rem;
     }
 }
+
+@media (orientation: landscape) and ( max-height: 600px) {
+    .slide-down-container {
+        font-size: .75rem;
+    }
+    .copy-container {
+        padding-top: 0;
+    }
+}
