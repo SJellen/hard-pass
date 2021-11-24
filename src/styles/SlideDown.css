@@ -110,13 +110,13 @@
     }
 
     .single-input > label {
-        padding-left: 5%;
         max-width: 60%;
     }
 
     .single-input > input {
         max-width: 60%;
     }
+
 }
 
 @media only screen and (max-width: 375px) {
