@@ -87,4 +87,30 @@
         font-size: .9rem;
     }
 
+    .single-input-password {
+        margin-left: 2rem;
+        max-width: 60%;
+        word-wrap: break-word;
+    }
+
+    .input-container {
+        border: 1px solid blue;
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .single-input {
+        width: 100%;
+        padding-left: 0;
+    }
+    .single-input > label {
+        padding-left: 5%;
+        max-width: 60%;
+    }
+
+    .single-input > input {
+        max-width: 60%;
+    }
+
+
 }
