@@ -118,3 +118,12 @@
         max-width: 60%;
     }
 }
+
+@media only screen and (max-width: 375px) {
+    .slide-down-container {
+        width: 100vw;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        font-size: .75rem;
+    }
+}
