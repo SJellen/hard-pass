@@ -164,6 +164,9 @@ button:hover {
         border-bottom-right-radius: 5px;
         height: 60px;
     }
+    .selection-container {
+        height: 75px;
+    }
 
     button {
         font-size: .75rem;
@@ -175,6 +178,29 @@ button:hover {
 @media (orientation: landscape) and ( max-height: 600px) {
     .main-container {
         margin-top: 1rem;
+        font-size: .75rem;
+    }
+
+    .top-container {
+        height: 75px;
+    }
+    .password {
+        font-size: .9rem;
+    }
+    button {
+        font-size: .75rem;
+        padding: .25rem .5rem;
+        border-radius: 5px;
+    }
+    .button-container {
+        height: 60px;
+    }
+    svg {
+        width: 18px;
+        height: 18px;
+    }
+    .selection-container {
+        height: 75px;
     }
 }
 
