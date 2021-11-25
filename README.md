@@ -4,7 +4,7 @@
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000" />
   <a href="https://twitter.com/https://twitter.com\/ScottJellen" target="_blank">
-    <img alt="Twitter: https:\/\/twitter.com//ScottJellen" src="https://img.shields.io/twitter/follow/https://twitter.com\/ScottJellen.svg?style=social" />
+    <img alt="Twitter: https://twitter.com//ScottJellen" src="https://img.shields.io/twitter/follow/https://twitter.com\/ScottJellen.svg?style=social" />
   </a>
 </p>
 
