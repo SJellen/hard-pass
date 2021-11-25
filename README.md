@@ -37,7 +37,7 @@ npm run test
 👤 **Scott Jellen**
 
 * Website: https://scottjellen.com/
-* Twitter: [@hhttps://twitter.com/ScottJellen](https://twitter.com/ScottJellen)
+* Twitter: [@https://twitter.com/ScottJellen](https://twitter.com/ScottJellen)
 * Github: [@https://github.com/SJellen/hard-pass](https://github.com/SJellen/hard-pass)
 * LinkedIn: [@https://www.linkedin.com/in/scottjellen/](https://www.linkedin.com/in/scottjellen/)
 
