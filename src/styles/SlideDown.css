@@ -20,8 +20,6 @@
 
 .close-button:hover {
     cursor: pointer;
-    filter: drop-shadow(.5px .5px 10px black);
-    transition: filter 2s;
 }
 
 .input-container {
