@@ -8,5 +8,4 @@ export default function Header() {
             <span className="logo-container"><h1 className="logo">Hard Pass</h1></span>
         </div>
     )
-    
 }
